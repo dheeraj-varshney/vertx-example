@@ -5,6 +5,7 @@ import io.vertx.core.http.HttpServer;
 import io.vertx.core.http.HttpServerResponse;
 import io.vertx.ext.web.Route;
 import io.vertx.ext.web.Router;
+import org.example.examples.DesignPatterns;
 
 import java.util.Date;
 
@@ -42,5 +43,23 @@ public class App {
                         System.out.println("Server listening at http://locahost:" + port);
                     }
                 });
+
+        DesignPatterns patterns = new DesignPatterns();
+
+        System.out.println("Factory Method Demo");
+        patterns.factoryMethodExample();
+        System.out.println();
+
+        System.out.println("Abstract Factory Method");
+        patterns.abstractFactoryExample();
+        System.out.println();
+
+        System.out.println("Singleton Demo");
+        patterns.singletonExample();
+        System.out.println();
+
+        System.out.println("Builder Demo");
+        patterns.builderExample();
+        System.out.println();
     }
 }
